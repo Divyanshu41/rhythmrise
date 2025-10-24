@@ -28,6 +28,14 @@
           <button id="oct-up">Oct +</button>
         </div>
 
+        <label>Theme:
+          <select id="theme-selector">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+            <option value="neon">Neon</option>
+          </select>
+        </label>
+
         <button id="record">Record</button>
         <button id="playback" disabled>Play</button>
         <button id="clear">Clear Rec</button>
@@ -36,6 +44,25 @@
       <section class="view-options">
         <button id="mobile-mode">Mobile Mode</button>
         <button id="laptop-mode">Laptop Mode</button>
+      </section>
+
+      <section class="help-section">
+        <button id="help-toggle">Help</button>
+        <div id="help-content" style="display: none;">
+          <h2>How to Play the Piano</h2>
+          <ul>
+            <li><strong>Keys:</strong> Click on the piano keys or use your computer keyboard to play notes.</li>
+            <li><strong>Instrument:</strong> Select an instrument from the dropdown to change the sound.</li>
+            <li><strong>Volume:</strong> Adjust the volume using the slider.</li>
+            <li><strong>Octave:</strong> Use the Octave +/- buttons to shift the range of notes.</li>
+            <li><strong>Record:</strong> Press the Record button to start recording your notes.</li>
+            <li><strong>Playback:</strong> Play back your recorded notes using the Play button.</li>
+            <li><strong>Clear:</strong> Clear your recording with the Clear button.</li>
+            <li><strong>Mobile/Laptop Mode:</strong> Switch between Mobile and Laptop modes for the best experience.</li>
+            <li><strong>Preset Songs:</strong> Select a song from the dropdown and press Play to hear it.</li>
+          </ul>
+          <button id="close-help">Close</button>
+        </div>
       </section>
 
       <script>

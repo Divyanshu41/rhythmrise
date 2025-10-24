@@ -136,4 +136,63 @@
 
   // init
   buildKeys();
+
+  // Mobile and Laptop Mode Switching
+  const mobileModeBtn = document.getElementById('mobile-mode');
+  const laptopModeBtn = document.getElementById('laptop-mode');
+
+  mobileModeBtn.addEventListener('click', () => {
+    if (screen.orientation && screen.orientation.lock) {
+      screen.orientation.lock('landscape').then(() => {
+        alert('Switched to Mobile Mode. Please use landscape orientation.');
+      }).catch(err => {
+        console.warn('Orientation lock failed:', err);
+        alert('Please rotate your device to landscape mode manually.');
+      });
+    } else {
+      alert('Screen orientation lock not supported. Please rotate your device manually.');
+    }
+
+    document.body.classList.add('mobile-mode');
+    document.body.classList.remove('laptop-mode');
+  });
+
+  laptopModeBtn.addEventListener('click', () => {
+    if (screen.orientation && screen.orientation.unlock) {
+      screen.orientation.unlock().catch(err => {
+        console.warn('Orientation unlock failed:', err);
+      });
+    }
+
+    document.body.classList.add('laptop-mode');
+    document.body.classList.remove('mobile-mode');
+    alert('Switched to Laptop Mode.');
+  });
+
+  // Help Section Toggle
+  const helpToggle = document.getElementById('help-toggle');
+  const helpContent = document.getElementById('help-content');
+  const closeHelp = document.getElementById('close-help');
+
+  helpToggle.addEventListener('click', () => {
+    helpContent.style.display = helpContent.style.display === 'none' ? 'block' : 'none';
+  });
+
+  closeHelp.addEventListener('click', () => {
+    helpContent.style.display = 'none';
+  });
+
+  // Theme Selector
+  const themeSelector = document.getElementById('theme-selector');
+
+  themeSelector.addEventListener('change', () => {
+    const selectedTheme = themeSelector.value;
+    document.body.className = selectedTheme;
+    localStorage.setItem('selectedTheme', selectedTheme);
+  });
+
+  // Load saved theme on startup
+  const savedTheme = localStorage.getItem('selectedTheme') || 'dark';
+  document.body.className = savedTheme;
+  themeSelector.value = savedTheme;
 })();

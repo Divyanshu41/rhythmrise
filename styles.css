@@ -34,3 +34,50 @@ canvas{width:100%;height:120px;border-radius:6px;background:linear-gradient(180d
   .key.white{width:44px;height:160px}
   .key.black{width:28px;height:100px}
 }
+
+body.neon {
+  --bg-color: #0a0f24;
+  --text-color: #39ff14;
+  --key-white: #39ff14;
+  --key-black: #0a0f24;
+  --key-shadow: rgba(57, 255, 20, 0.5);
+}
+
+body.neon .key.black {
+  background: #39ff14;
+  color: #0a0f24;
+}
+
+body.neon .key.white {
+  background: #0a0f24;
+  color: #39ff14;
+}
+
+body.neon .label {
+  color: #39ff14;
+}
+
+body.dark {
+  --bg-color: #0f1724;
+  --text-color: #e6eef8;
+  --key-white: #fff;
+  --key-black: #222;
+  --key-shadow: rgba(0, 0, 0, 0.25);
+}
+
+body.light {
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+  --key-white: #f0f0f0;
+  --key-black: #444;
+  --key-shadow: rgba(0, 0, 0, 0.15);
+}
+
+body.dark .key.black .label,
+body.light .key.black .label {
+  color: #fff;
+}
+
+body.light .key.white .label {
+  color: #222;
+}
