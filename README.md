@@ -1,21 +1,33 @@
-# RhythmRise — Simple Web Piano
+# RhythmRise — Web Piano
 
-Small demo web piano built with HTML/CSS/JS using the Web Audio API. It demonstrates:
+## 🌟 [Live Demo: RhythmRise on Netlify](https://rhythmrise.netlify.app/) 🌟
 
-- Mouse + keyboard input to play notes
-- Visual feedback for pressed keys
-- Instrument selection (basic oscillator types)
-- Volume and octave controls
-- Simple record/playback of performed notes
-- Visualizer using AnalyserNode
+Click the link above to explore the live version of the project and start playing music instantly!
 
-## How to use
-1. Open `index.html` in a modern browser (Chrome/Edge/Firefox).
-2. Click keys or use keyboard mapping (try `A W S E D R F T G Y H U` sequence to play notes).
-3. Choose instrument and adjust volume.
-4. Click `Record`, play something, then `Stop Rec`. Click `Play` to hear playback.
+---
 
-## Notes & next improvements
-- This uses synthesized tones (oscillators) for simplicity. You can swap to sampled piano sounds or SoundFont.
-- Improve keyboard mapping and mobile touch handling.
-- Add multiple octaves viewport, sustain pedal, and better ADSR for realism.
+## About RhythmRise
+RhythmRise is a web-based piano application designed to bring the joy of music to everyone. Whether you're a beginner or a seasoned musician, RhythmRise offers a simple and intuitive interface to create and enjoy music.
+
+## Features
+- Play piano using your keyboard or mouse.
+- Choose from multiple instruments and themes.
+- Record, playback, and save your musical creations.
+- Visualizer for a dynamic and engaging experience.
+- Mobile-friendly design with landscape mode support.
+- MIDI keyboard input support for advanced users.
+
+## How to Use
+1. Open the [live demo](https://rhythmrise.netlify.app/) in your browser.
+2. Select your preferred instrument and theme.
+3. Start playing by clicking the keys or using your keyboard.
+4. Record your performance and play it back anytime.
+
+## Technologies Used
+- HTML, CSS, JavaScript
+- Web Audio API
+- Web MIDI API
+- SoundFont libraries
+
+## License
+This project is licensed under the MIT License.
