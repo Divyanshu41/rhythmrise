@@ -33,6 +33,22 @@
         <button id="clear">Clear Rec</button>
       </section>
 
+      <section class="view-options">
+        <button id="mobile-mode">Mobile Mode</button>
+        <button id="laptop-mode">Laptop Mode</button>
+      </section>
+
+      <script>
+        // Enforce landscape mode on mobile
+        if (window.matchMedia("(max-width: 800px)").matches) {
+          if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock("landscape").catch(err => console.warn("Orientation lock not supported", err));
+          } else {
+            alert("Please rotate your device to landscape mode for the best experience.");
+          }
+        }
+      </script>
+
       <section class="piano-wrap">
         <div id="piano" class="piano" aria-label="Virtual piano"></div>
       </section>
